@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\UEProj.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UEProj.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\UEProjEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\UEProj">
+      <UniqueIdentifier>{4C5C97DD-06CA-3C99-8C40-F547F9574D36}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UEProj\TP_PickUpComponent.cpp">
+      <Filter>Source\UEProj</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEProj\TP_PickUpComponent.h">
+      <Filter>Source\UEProj</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEProj\TP_WeaponComponent.cpp">
+      <Filter>Source\UEProj</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEProj\TP_WeaponComponent.h">
+      <Filter>Source\UEProj</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\UEProj\UEProj.Build.cs">
+      <Filter>Source\UEProj</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\UEProj\UEProj.cpp">
+      <Filter>Source\UEProj</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEProj\UEProj.h">
+      <Filter>Source\UEProj</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEProj\UEProjCharacter.cpp">
+      <Filter>Source\UEProj</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEProj\UEProjCharacter.h">
+      <Filter>Source\UEProj</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEProj\UEProjGameMode.cpp">
+      <Filter>Source\UEProj</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEProj\UEProjGameMode.h">
+      <Filter>Source\UEProj</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEProj\UEProjPlayerController.cpp">
+      <Filter>Source\UEProj</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEProj\UEProjPlayerController.h">
+      <Filter>Source\UEProj</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UEProj\UEProjProjectile.cpp">
+      <Filter>Source\UEProj</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UEProj\UEProjProjectile.h">
+      <Filter>Source\UEProj</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

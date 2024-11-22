@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Source\\UEProj\\UEProj.Build.cs",
+		"A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Source\\UEProj.Target.cs",
+		"A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Source\\UEProjEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}
