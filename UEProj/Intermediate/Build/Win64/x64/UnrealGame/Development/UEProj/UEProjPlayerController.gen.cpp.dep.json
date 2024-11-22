@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealgame\\inc\\ueproj\\uht\\ueprojplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\ueproj\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\unrealgame\\development\\ueproj\\definitions.ueproj.h",
+            "a:\\gamedev\\projs\\t_ue_client\\ueproj\\source\\ueproj\\ueprojplayercontroller.h",
+            "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealgame\\inc\\ueproj\\uht\\ueprojplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
