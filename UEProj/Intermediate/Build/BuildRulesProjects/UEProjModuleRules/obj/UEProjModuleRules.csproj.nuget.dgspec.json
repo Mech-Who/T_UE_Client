@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj": {}
+    "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj": {}
   },
   "projects": {
     "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj": {
@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -56,8 +57,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -91,6 +91,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -131,8 +132,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -166,6 +166,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5Rules\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -203,8 +204,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -238,6 +238,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -278,8 +279,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -327,6 +327,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -357,8 +358,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -430,6 +430,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Horde\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -476,8 +477,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -559,6 +559,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.IoHash\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -593,8 +594,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -638,6 +638,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.MsBuild\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -672,8 +673,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -720,6 +720,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.OIDC\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -750,8 +751,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -799,6 +799,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Oodle\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -829,8 +830,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -864,6 +864,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.Serialization\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -898,8 +899,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -933,6 +933,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.UBA\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -963,8 +964,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -1008,6 +1008,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\Shared\\EpicGames.UHT\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -1045,8 +1046,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -1086,6 +1086,7 @@
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
         "outputPath": "A:\\GameDev\\Engine\\UE_5.4\\Engine\\Source\\Programs\\UnrealBuildTool\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -1141,8 +1142,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -1196,15 +1196,16 @@
         }
       }
     },
-    "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj": {
+    "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
+        "projectUniqueName": "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
         "projectName": "UEProjModuleRules",
-        "projectPath": "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
+        "projectPath": "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
         "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
-        "outputPath": "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\obj\\",
+        "outputPath": "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
         ],
@@ -1251,8 +1252,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {

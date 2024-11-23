@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QlZYaNd8z7A=",
+  "dgSpecHash": "2iqXGjqFqXI=",
   "success": true,
-  "projectFilePath": "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
+  "projectFilePath": "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\colin\\.nuget\\packages\\bitfaster.caching\\2.4.1\\bitfaster.caching.2.4.1.nupkg.sha512",
     "C:\\Users\\colin\\.nuget\\packages\\blake3\\0.5.1\\blake3.0.5.1.nupkg.sha512",
@@ -155,7 +155,7 @@
       "code": "NU1904",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "包 \"System.Drawing.Common\" 4.7.0 具有已知的 严重 严重性漏洞，https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
       "libraryId": "System.Drawing.Common",
       "targetGraphs": [
         "net6.0"
@@ -165,7 +165,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "包 \"System.Net.Http\" 4.3.0 具有已知的 高 严重性漏洞，https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
+      "message": "Package 'System.Net.Http' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
       "libraryId": "System.Net.Http",
       "targetGraphs": [
         "net6.0"
@@ -175,7 +175,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "包 \"System.Text.RegularExpressions\" 4.3.0 具有已知的 高 严重性漏洞，https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
+      "message": "Package 'System.Text.RegularExpressions' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
       "libraryId": "System.Text.RegularExpressions",
       "targetGraphs": [
         "net6.0"

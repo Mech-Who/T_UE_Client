@@ -17,11 +17,11 @@ struct FHitResult;
 #endif
 #define UEPROJ_UEProjProjectile_generated_h
 
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAUEProjProjectile(); \
 	friend struct Z_Construct_UClass_AUEProjProjectile_Statics; \
@@ -32,7 +32,7 @@ public: \
 
 
 
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AUEProjProjectile(AUEProjProjectile&&); \
@@ -44,13 +44,13 @@ public: \
 	NO_API virtual ~AUEProjProjectile();
 
 
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_12_PROLOG
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_GENERATED_BODY \
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_12_PROLOG
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_ENHANCED_CONSTRUCTORS \
+	FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_INCLASS_NO_PURE_DECLS \
+	FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -58,7 +58,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> UEPROJ_API UClass* StaticClass<class AUEProjProjectile>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h
+#define CURRENT_FILE_ID FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjProjectile_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

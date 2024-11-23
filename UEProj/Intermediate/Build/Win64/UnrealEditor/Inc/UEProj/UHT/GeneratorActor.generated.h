@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UEPROJ_GeneratorActor_generated_h
 
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_Public_GeneratorActor_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_GeneratorActor_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGeneratorActor(); \
 	friend struct Z_Construct_UClass_AGeneratorActor_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AGeneratorActor)
 
 
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_Public_GeneratorActor_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_GeneratorActor_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AGeneratorActor(AGeneratorActor&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~AGeneratorActor();
 
 
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_Public_GeneratorActor_h_9_PROLOG
-#define FID_Projs_T_UE_Client_UEProj_Source_UEProj_Public_GeneratorActor_h_12_GENERATED_BODY \
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_GeneratorActor_h_9_PROLOG
+#define FID_GProjs_T_UE_Client_UEProj_Source_UEProj_GeneratorActor_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Projs_T_UE_Client_UEProj_Source_UEProj_Public_GeneratorActor_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Projs_T_UE_Client_UEProj_Source_UEProj_Public_GeneratorActor_h_12_ENHANCED_CONSTRUCTORS \
+	FID_GProjs_T_UE_Client_UEProj_Source_UEProj_GeneratorActor_h_12_INCLASS_NO_PURE_DECLS \
+	FID_GProjs_T_UE_Client_UEProj_Source_UEProj_GeneratorActor_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> UEPROJ_API UClass* StaticClass<class AGeneratorActor>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Projs_T_UE_Client_UEProj_Source_UEProj_Public_GeneratorActor_h
+#define CURRENT_FILE_ID FID_GProjs_T_UE_Client_UEProj_Source_UEProj_GeneratorActor_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

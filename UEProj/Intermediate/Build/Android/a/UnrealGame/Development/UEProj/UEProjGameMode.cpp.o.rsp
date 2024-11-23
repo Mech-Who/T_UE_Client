@@ -1,7 +1,6 @@
 -c
 -pipe
 -I"."
--I"A:/GameDev/Projs/T_UE_Client/UEProj/Source/UEProj/Private"
 -I"../Intermediate/Build/Android/UnrealGame/Inc/Engine/UHT"
 -I"Runtime/Engine/Classes"
 -I"Runtime/Engine/Public"
@@ -117,9 +116,8 @@
 -I"Runtime/TypedElementFramework/Public"
 -I"../Intermediate/Build/Android/UnrealGame/Inc/TypedElementRuntime/UHT"
 -I"Runtime/TypedElementRuntime/Public"
--I"A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/UnrealGame/Inc/UEProj/UHT"
--I"A:/GameDev/Projs/T_UE_Client/UEProj/Source"
--I"A:/GameDev/Projs/T_UE_Client/UEProj/Source/UEProj/Public"
+-I"A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/UnrealGame/Inc/UEProj/UHT"
+-I"A:/GProjs/T_UE_Client/UEProj/Source"
 -I"../Plugins/EnhancedInput/Intermediate/Build/Android/UnrealGame/Inc/EnhancedInput/UHT"
 -I"../Plugins/EnhancedInput/Source"
 -I"../Plugins/EnhancedInput/Source/EnhancedInput/Public"
@@ -190,11 +188,11 @@
 -DPLATFORM_ANDROID_ARM64=1
 -march=armv8-a
 -fsigned-char
--include-pch "A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Engine/SharedPCH.Engine.Project.ValApi.Cpp20.h.gch"
--include "A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UnrealGame/Development/UEProj/Definitions.UEProj.h"
+-include-pch "A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Engine/SharedPCH.Engine.Project.ValApi.Cpp20.h.gch"
+-include "A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UnrealGame/Development/UEProj/Definitions.UEProj.h"
 -x c++
 -std=c++20
 -fpch-validate-input-files-content
-"A:/GameDev/Projs/T_UE_Client/UEProj/Source/UEProj/UEProjGameMode.cpp"
--MD -MF"A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UnrealGame/Development/UEProj/UEProjGameMode.cpp.d"
--o "A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UnrealGame/Development/UEProj/UEProjGameMode.cpp.o"
+"A:/GProjs/T_UE_Client/UEProj/Source/UEProj/UEProjGameMode.cpp"
+-MD -MF"A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UnrealGame/Development/UEProj/UEProjGameMode.cpp.d"
+-o "A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UnrealGame/Development/UEProj/UEProjGameMode.cpp.o"

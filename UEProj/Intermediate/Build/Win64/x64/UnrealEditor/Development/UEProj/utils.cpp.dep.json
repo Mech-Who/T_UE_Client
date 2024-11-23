@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "a:\\gprojs\\t_ue_client\\ueproj\\source\\ueproj\\utils.cpp",
+        "ProvidedModule": "",
+        "PCH": "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\ueprojeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ueproj\\definitions.ueproj.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\source\\ueproj\\utils.h",
+            "a:\\dev\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\string",
+            "a:\\dev\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\xstring",
+            "a:\\dev\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\__msvc_sanitizer_annotate_container.hpp",
+            "a:\\dev\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\xpolymorphic_allocator.h",
+            "a:\\dev\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\cctype"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

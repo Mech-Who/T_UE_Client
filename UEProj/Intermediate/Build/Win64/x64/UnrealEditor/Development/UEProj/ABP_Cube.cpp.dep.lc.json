@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "a:\\gprojs\\t_ue_client\\ueproj\\source\\ueproj\\private\\abp_cube.cpp",
+        "ProvidedModule": "",
+        "PCH": "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\ueprojeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ueproj\\definitions.ueproj.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\source\\ueproj\\public\\abp_cube.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealeditor\\inc\\ueproj\\uht\\abp_cube.generated.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\source\\ueproj\\public\\abullet.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealeditor\\inc\\ueproj\\uht\\abullet.generated.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\source\\ueproj\\ueprojgamemode.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "a:\\gamedev\\engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealeditor\\inc\\ueproj\\uht\\ueprojgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

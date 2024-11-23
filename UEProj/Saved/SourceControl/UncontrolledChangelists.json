@@ -1,0 +1,14 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"A:/GProjs/T_UE_Client/UEProj/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/84/7B8HG4HU41NDC6FPASCKJ0.uasset",
+				"A:/GProjs/T_UE_Client/UEProj/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/6/GV/RCK8KLWNR7ZGGOHWLAK852.uasset",
+				"A:/GProjs/T_UE_Client/UEProj/Content/ABP_Cube.uasset"
+			]
+		}
+	]
+}

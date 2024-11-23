@@ -90,11 +90,11 @@
 -DPLATFORM_ANDROID_ARM64=1
 -march=armv8-a
 -fsigned-char
--include-pch "A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/CoreUObject/SharedPCH.CoreUObject.Cpp20.h.gch"
+-include-pch "A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/CoreUObject/SharedPCH.CoreUObject.Cpp20.h.gch"
 -x c++-header
 -fpch-instantiate-templates
 -std=c++20
 -fpch-validate-input-files-content
-"A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Slate/SharedPCH.Slate.Cpp20.h"
--MD -MF"A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Slate/SharedPCH.Slate.Cpp20.h.d"
--o "A:/GameDev/Projs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Slate/SharedPCH.Slate.Cpp20.h.gch"
+"A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Slate/SharedPCH.Slate.Cpp20.h"
+-MD -MF"A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Slate/SharedPCH.Slate.Cpp20.h.d"
+-o "A:/GProjs/T_UE_Client/UEProj/Intermediate/Build/Android/a/UEProj/Development/Slate/SharedPCH.Slate.Cpp20.h.gch"

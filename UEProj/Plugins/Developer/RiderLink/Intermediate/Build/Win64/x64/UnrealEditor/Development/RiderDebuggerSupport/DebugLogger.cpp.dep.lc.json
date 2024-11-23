@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "a:\\gprojs\\t_ue_client\\ueproj\\plugins\\developer\\riderlink\\source\\riderdebuggersupport\\private\\debuglogger.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "a:\\gprojs\\t_ue_client\\ueproj\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\riderdebuggersupport\\definitions.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\plugins\\developer\\riderlink\\source\\riderdebuggersupport\\private\\debuglogger.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

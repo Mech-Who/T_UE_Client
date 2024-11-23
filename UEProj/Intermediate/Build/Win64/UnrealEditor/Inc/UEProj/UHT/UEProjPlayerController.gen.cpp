@@ -99,14 +99,14 @@ AUEProjPlayerController::~AUEProjPlayerController() {}
 // End Class AUEProjPlayerController
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_Statics
+struct Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AUEProjPlayerController, AUEProjPlayerController::StaticClass, TEXT("AUEProjPlayerController"), &Z_Registration_Info_UClass_AUEProjPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUEProjPlayerController), 2597380577U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_2247833567(TEXT("/Script/UEProj"),
-	Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_2247833567(TEXT("/Script/UEProj"),
+	Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealeditor\\inc\\ueproj\\uht\\ueprojprojectile.gen.cpp",
+        "Source": "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealeditor\\inc\\ueproj\\uht\\ueprojprojectile.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\ueprojeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\ueprojeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ueproj\\definitions.ueproj.h",
-            "a:\\gamedev\\projs\\t_ue_client\\ueproj\\source\\ueproj\\ueprojprojectile.h",
-            "a:\\gamedev\\projs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealeditor\\inc\\ueproj\\uht\\ueprojprojectile.generated.h"
+            "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ueproj\\definitions.ueproj.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\source\\ueproj\\ueprojprojectile.h",
+            "a:\\gprojs\\t_ue_client\\ueproj\\intermediate\\build\\win64\\unrealeditor\\inc\\ueproj\\uht\\ueprojprojectile.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

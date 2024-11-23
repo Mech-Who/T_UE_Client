@@ -1,4 +1,4 @@
-"A:\GameDev\Projs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.cpp"
+"A:\GProjs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.cpp"
 /I "."
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\UnrealEd\UHT"
 /I "Programs\UnrealLightmass\Public"
@@ -290,10 +290,10 @@
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/Yc"A:\GameDev\Projs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"A:\GameDev\Projs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"A:\GameDev\Projs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-/sourceDependencies "A:\GameDev\Projs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.dep.json"
+/Yc"A:\GProjs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"A:\GProjs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"A:\GProjs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+/sourceDependencies "A:\GProjs\T_UE_Client\UEProj\Intermediate\Build\Win64\x64\UEProjEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.dep.json"
 /Zc:inline
 /nologo
 /Oi

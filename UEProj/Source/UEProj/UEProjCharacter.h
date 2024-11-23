@@ -36,6 +36,9 @@ class AUEProjCharacter : public ACharacter
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
+
+public:
+	int Score=0;
 	
 public:
 	AUEProjCharacter();
@@ -67,5 +70,10 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
+	// 获取玩家积分
+	int GetScore() const { return Score; }
+
+	// 增加积分
+	void AddScore(int Points) { Score += Points; }
 };
 

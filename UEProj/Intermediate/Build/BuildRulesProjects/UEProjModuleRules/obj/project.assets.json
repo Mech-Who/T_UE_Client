@@ -8483,73 +8483,73 @@
     },
     "EpicGames.Build/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj"
     },
     "EpicGames.Core/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj"
     },
     "EpicGames.Horde/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj"
     },
     "EpicGames.IoHash/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj"
     },
     "EpicGames.MsBuild/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj"
     },
     "EpicGames.OIDC/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj"
     },
     "EpicGames.Oodle/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj"
     },
     "EpicGames.Serialization/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj"
     },
     "EpicGames.UBA/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj"
     },
     "EpicGames.UHT/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj"
     },
     "MarketplaceRules/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj"
     },
     "UE5ProgramRules/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj"
     },
     "UE5Rules/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj"
     },
     "UnrealBuildTool/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj",
-      "msbuildProject": "../../../../../../../Engine/UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj"
+      "path": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj",
+      "msbuildProject": "../../../../../../../GameDev/Engine/UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8568,12 +8568,13 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
+      "projectUniqueName": "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
       "projectName": "UEProjModuleRules",
-      "projectPath": "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
+      "projectPath": "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\UEProjModuleRules.csproj",
       "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
-      "outputPath": "A:\\GameDev\\Projs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\obj\\",
+      "outputPath": "A:\\GProjs\\T_UE_Client\\UEProj\\Intermediate\\Build\\BuildRulesProjects\\UEProjModuleRules\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\UserData\\Download\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"
       ],
@@ -8620,8 +8621,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net6.0": {
@@ -8651,7 +8651,7 @@
       "code": "NU1904",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "包 \"System.Drawing.Common\" 4.7.0 具有已知的 严重 严重性漏洞，https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
       "libraryId": "System.Drawing.Common",
       "targetGraphs": [
         "net6.0"
@@ -8661,7 +8661,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "包 \"System.Net.Http\" 4.3.0 具有已知的 高 严重性漏洞，https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
+      "message": "Package 'System.Net.Http' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
       "libraryId": "System.Net.Http",
       "targetGraphs": [
         "net6.0"
@@ -8671,7 +8671,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "包 \"System.Text.RegularExpressions\" 4.3.0 具有已知的 高 严重性漏洞，https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
+      "message": "Package 'System.Text.RegularExpressions' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
       "libraryId": "System.Text.RegularExpressions",
       "targetGraphs": [
         "net6.0"

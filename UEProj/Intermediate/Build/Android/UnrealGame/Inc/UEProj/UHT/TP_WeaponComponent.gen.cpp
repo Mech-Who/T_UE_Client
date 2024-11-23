@@ -332,14 +332,14 @@ UTP_WeaponComponent::~UTP_WeaponComponent() {}
 // End Class UTP_WeaponComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UTP_WeaponComponent, UTP_WeaponComponent::StaticClass, TEXT("UTP_WeaponComponent"), &Z_Registration_Info_UClass_UTP_WeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTP_WeaponComponent), 1791297025U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_3087325328(TEXT("/Script/UEProj"),
-	Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_3087325328(TEXT("/Script/UEProj"),
+	Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_TP_WeaponComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
