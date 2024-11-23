@@ -11,6 +11,10 @@
     <None Include="..\..\Source\UEProjEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.editorconfig" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\shadertoolsconfig.json" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -76,6 +80,18 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\UEProj\UEProjProjectile.h">
       <Filter>Source\UEProj</Filter>
+    </ClInclude>
+    <Filter Include="Source\UEProj\Private">
+      <UniqueIdentifier>{85914BE4-D4CB-3A70-9AC8-C06DC625208C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UEProj\Private\GeneratorActor.cpp">
+      <Filter>Source\UEProj\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\UEProj\Public">
+      <UniqueIdentifier>{521A0DB0-B99C-3FAE-8D55-C035C0BFB9FD}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UEProj\Public\GeneratorActor.h">
+      <Filter>Source\UEProj\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

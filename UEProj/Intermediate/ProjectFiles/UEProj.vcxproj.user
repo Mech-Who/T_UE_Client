@@ -21,6 +21,11 @@
     <RemoteDebuggerCommandArguments>"$(SolutionDir)UEProj.uproject" -skipcompile</RemoteDebuggerCommandArguments>
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame|Android-arm64-v8a'">
+    <AndroidLldbStartupCommands>command script import "A:\GameDev\Engine\UE_5.4\Engine\Extras\LLDBDataFormatters\UEDataFormatters_2ByteChars.py";$(AndroidLldbStartupCommands)</AndroidLldbStartupCommands>
+    <AndroidDebugTarget></AndroidDebugTarget>
+    <AndroidPostApkInstallCommands>IF EXIST A:\GameDev\Projs\T_UE_Client\UEProj\Binaries\Android\Push_UEProj-Android-DebugGame-arm64_so.bat A:\GameDev\Projs\T_UE_Client\UEProj\Binaries\Android\Push_UEProj-Android-DebugGame-arm64_so.bat $([System.String]::Concat($(AndroidDebugTarget), "::").Split(':')[1]);$(AndroidPostApkInstallCommands)</AndroidPostApkInstallCommands>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
@@ -42,6 +47,11 @@
     <RemoteDebuggerCommandArguments>"$(SolutionDir)UEProj.uproject" -skipcompile</RemoteDebuggerCommandArguments>
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|Android-arm64-v8a'">
+    <AndroidLldbStartupCommands>command script import "A:\GameDev\Engine\UE_5.4\Engine\Extras\LLDBDataFormatters\UEDataFormatters_2ByteChars.py";$(AndroidLldbStartupCommands)</AndroidLldbStartupCommands>
+    <AndroidDebugTarget></AndroidDebugTarget>
+    <AndroidPostApkInstallCommands>IF EXIST A:\GameDev\Projs\T_UE_Client\UEProj\Binaries\Android\Push_UEProj-arm64_so.bat A:\GameDev\Projs\T_UE_Client\UEProj\Binaries\Android\Push_UEProj-arm64_so.bat $([System.String]::Concat($(AndroidDebugTarget), "::").Split(':')[1]);$(AndroidPostApkInstallCommands)</AndroidPostApkInstallCommands>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|x64'">
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
@@ -50,5 +60,10 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Shipping|x64'">
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Android-arm64-v8a'">
+    <AndroidLldbStartupCommands>command script import "A:\GameDev\Engine\UE_5.4\Engine\Extras\LLDBDataFormatters\UEDataFormatters_2ByteChars.py";$(AndroidLldbStartupCommands)</AndroidLldbStartupCommands>
+    <AndroidDebugTarget></AndroidDebugTarget>
+    <AndroidPostApkInstallCommands>IF EXIST A:\GameDev\Projs\T_UE_Client\UEProj\Binaries\Android\Push_UEProj-Android-Shipping-arm64_so.bat A:\GameDev\Projs\T_UE_Client\UEProj\Binaries\Android\Push_UEProj-Android-Shipping-arm64_so.bat $([System.String]::Concat($(AndroidDebugTarget), "::").Split(':')[1]);$(AndroidPostApkInstallCommands)</AndroidPostApkInstallCommands>
   </PropertyGroup>
 </Project>
