@@ -46,11 +46,13 @@ void AABP_Cube::OnHit(
 {
 		if (OtherActor && OtherActor->IsA(AUEProjProjectile::StaticClass())) {
 			ScaleFactor -= 0.5f;  // scale to 50% each time
+			// Notify GameMode to add score
+			UE_LOG(LogTemp, Log, TEXT("Hit Actor"));
+			if (AUEProjGameMode* GameMode = Cast<AUEProjGameMode>(UGameplayStatics::GetGameMode(GetWorld()))) {
+				GameMode->AddScore(ScoreValue);
+				UE_LOG(LogTemp, Log, TEXT("Add Score: %d"), ScoreValue);
+			}
 			if (ScaleFactor <= MinScale) {
-				// Notify GameMode to add score
-				if (AUEProjGameMode* GameMode = Cast<AUEProjGameMode>(UGameplayStatics::GetGameMode(GetWorld()))) {
-					GameMode->AddScore(ScoreValue);
-				}
 				Destroy();  // destroy cube
 			} else {
 				SetActorScale3D(FVector(ScaleFactor));

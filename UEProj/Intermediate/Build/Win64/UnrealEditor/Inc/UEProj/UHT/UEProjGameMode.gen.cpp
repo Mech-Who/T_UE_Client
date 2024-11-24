@@ -10,6 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUEProjGameMode() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 UEPROJ_API UClass* Z_Construct_UClass_AUEProjGameMode();
 UEPROJ_API UClass* Z_Construct_UClass_AUEProjGameMode_NoRegister();
@@ -34,6 +37,26 @@ struct Z_Construct_UClass_AUEProjGameMode_Statics
 		{ "ModuleRelativePath", "UEProjGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpawnAreaMin_MetaData[] = {
+		{ "Category", "Game Rules" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe5\x9c\xb0\xe5\x9b\xbe\xe7\x94\x9f\xe6\x88\x90\xe8\x8c\x83\xe5\x9b\xb4\n" },
+#endif
+		{ "ModuleRelativePath", "UEProjGameMode.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x9c\xb0\xe5\x9b\xbe\xe7\x94\x9f\xe6\x88\x90\xe8\x8c\x83\xe5\x9b\xb4" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpawnAreaMax_MetaData[] = {
+		{ "Category", "Game Rules" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe5\x8c\xba\xe5\x9f\x9f\xe6\x9c\x80\xe5\xb0\x8f\xe5\x80\xbc\n" },
+#endif
+		{ "ModuleRelativePath", "UEProjGameMode.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8c\xba\xe5\x9f\x9f\xe6\x9c\x80\xe5\xb0\x8f\xe5\x80\xbc" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TotalCubes_MetaData[] = {
 		{ "Category", "Game Rules" },
 #if !UE_BUILD_SHIPPING
@@ -43,6 +66,10 @@ struct Z_Construct_UClass_AUEProjGameMode_Statics
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Total Cubes" },
 #endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CubeClass_MetaData[] = {
+		{ "Category", "Game Rules" },
+		{ "ModuleRelativePath", "UEProjGameMode.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ImportantCubeCount_MetaData[] = {
 		{ "Category", "Game Rules" },
@@ -65,7 +92,10 @@ struct Z_Construct_UClass_AUEProjGameMode_Statics
 #endif
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_SpawnAreaMin;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_SpawnAreaMax;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_TotalCubes;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_CubeClass;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ImportantCubeCount;
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_TimeLimit;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -75,11 +105,17 @@ struct Z_Construct_UClass_AUEProjGameMode_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpawnAreaMin = { "SpawnAreaMin", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, SpawnAreaMin), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnAreaMin_MetaData), NewProp_SpawnAreaMin_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpawnAreaMax = { "SpawnAreaMax", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, SpawnAreaMax), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnAreaMax_MetaData), NewProp_SpawnAreaMax_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_TotalCubes = { "TotalCubes", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, TotalCubes), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TotalCubes_MetaData), NewProp_TotalCubes_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_CubeClass = { "CubeClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, CubeClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CubeClass_MetaData), NewProp_CubeClass_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_ImportantCubeCount = { "ImportantCubeCount", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, ImportantCubeCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ImportantCubeCount_MetaData), NewProp_ImportantCubeCount_MetaData) };
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_TimeLimit = { "TimeLimit", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, TimeLimit), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeLimit_MetaData), NewProp_TimeLimit_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUEProjGameMode_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpawnAreaMin,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpawnAreaMax,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_TotalCubes,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_CubeClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_ImportantCubeCount,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_TimeLimit,
 };
@@ -124,10 +160,10 @@ AUEProjGameMode::~AUEProjGameMode() {}
 struct Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AUEProjGameMode, AUEProjGameMode::StaticClass, TEXT("AUEProjGameMode"), &Z_Registration_Info_UClass_AUEProjGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUEProjGameMode), 1209082798U) },
+		{ Z_Construct_UClass_AUEProjGameMode, AUEProjGameMode::StaticClass, TEXT("AUEProjGameMode"), &Z_Registration_Info_UClass_AUEProjGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUEProjGameMode), 3544625625U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_589591285(TEXT("/Script/UEProj"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_1145210930(TEXT("/Script/UEProj"),
 	Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

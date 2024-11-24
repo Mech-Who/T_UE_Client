@@ -35,7 +35,7 @@ public:
 	bool IsImportant=false;
 	// Current score
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cube")
-	int ScoreValue=0;
+	int ScoreValue=5;
 	// Current scale factor
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cube")
 	double ScaleFactor=1.0f;

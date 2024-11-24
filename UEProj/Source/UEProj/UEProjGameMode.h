@@ -26,24 +26,37 @@ public:
 	void ShowTime();
 
 private:
+	bool IsLocationValid(FVector Location,
+		const TArray<FVector>& ExistingLocations, float MinDistance);
 	void SpawnCubes();
 	void LogScores();
 
+	// 随机生成位置的函数
+	FVector GetRandomSpawnLocation();
+
+	// 地图生成范围
+	UPROPERTY(EditAnywhere, Category = "Game Rules")
+	FVector SpawnAreaMin = FVector(50.0f, 50.0f, 50.0f);  // 区域最小值
+
+	UPROPERTY(EditAnywhere, Category = "Game Rules")
+	FVector SpawnAreaMax = FVector(2850.0f, 3350.0f, 500.0f);    // 区域最大值
+	
 	FTimerHandle GameTimerHandle;
 	FTimerHandle TickTimerHandle;
 	TMap<APlayerController*, int> PlayerScores;
 	// Total Cubes
 	UPROPERTY(EditAnywhere, Category="Game Rules")
 	int TotalCubes = 20;
+	UPROPERTY(EditAnywhere, Category="Game Rules")
+	TSubclassOf<AActor> CubeClass;
 	// Valuable Cube
 	UPROPERTY(EditAnywhere, Category = "Game Rules")
 	int ImportantCubeCount = 5;
 	// Game Time
 	UPROPERTY(EditAnywhere, Category = "Game Rules")
-	double TimeLimit = 60.0f;
-	double LeftTime = 60.f;
-private:
-	int TotalScore;
+	double TimeLimit = 15.0f;
+	double LeftTime = TimeLimit;
+	int TotalScore = 0;
 };
 
 
