@@ -2,6 +2,9 @@
 
 #include "TP_PickUpComponent.h"
 
+#include "UEProjGameMode.h"
+#include "Kismet/GameplayStatics.h"
+
 UTP_PickUpComponent::UTP_PickUpComponent()
 {
 	// Setup the Sphere Collision
@@ -24,8 +27,13 @@ void UTP_PickUpComponent::OnSphereBeginOverlap(UPrimitiveComponent* OverlappedCo
 	{
 		// Notify that the actor is being picked up
 		OnPickUp.Broadcast(Character);
-
+		
 		// Unregister from the Overlap Event so it is no longer triggered
 		OnComponentBeginOverlap.RemoveAll(this);
+
+		if (AUEProjGameMode* GameMode = Cast<AUEProjGameMode>(UGameplayStatics::GetGameMode(GetWorld()))) {
+			GameMode->StartGame();
+			UE_LOG(LogTemp, Display, TEXT("===== Game Start ====="));
+		}
 	}
 }

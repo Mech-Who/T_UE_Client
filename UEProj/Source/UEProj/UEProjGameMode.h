@@ -23,6 +23,8 @@ public:
 	int GetScore() const;
 
 	void EndGame();
+	void StartGame();
+	void ResetGame();
 	void ShowTime();
 
 private:
@@ -57,6 +59,14 @@ private:
 	double TimeLimit = 15.0f;
 	double LeftTime = TimeLimit;
 	int TotalScore = 0;
+	// 材质资源
+	UPROPERTY(EditAnywhere, Category = "Materials")
+	UMaterialInterface* NormalMaterial = nullptr;
+	UPROPERTY(EditAnywhere, Category = "Materials")
+	UMaterialInterface* SpecialMaterial = nullptr;
+
+	bool IsGameStart = true;
+	bool IsGameOver = false;
 };
 
 

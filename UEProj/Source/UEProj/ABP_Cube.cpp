@@ -38,6 +38,20 @@ void AABP_Cube::Tick(float DeltaTime)
 
 }
 
+void AABP_Cube::SetMaterial(UMaterialInterface* NewMaterial)
+{
+	if (NewMaterial && this->StaticCubeMesh) {
+		StaticCubeMesh->SetMaterial(0, NewMaterial);
+	}
+}
+
+void AABP_Cube::BeImportant(int NewScore, UMaterialInterface* NewMaterial)
+{
+	this->IsImportant = true;
+	this->ScoreValue = NewScore;
+	this->SetMaterial(NewMaterial);
+}
+
 // Process when hitted
 void AABP_Cube::OnHit(
 	UPrimitiveComponent* HitComp,

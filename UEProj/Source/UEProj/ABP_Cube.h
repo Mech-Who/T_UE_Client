@@ -24,6 +24,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void SetMaterial(UMaterialInterface* NewMaterial);
+	void BeImportant(int NewScore, UMaterialInterface* NewMaterial=nullptr);
+	
 	// process when hit
 	UFUNCTION()
 	void OnHit(

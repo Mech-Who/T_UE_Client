@@ -14,6 +14,7 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
+ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 UEPROJ_API UClass* Z_Construct_UClass_AUEProjGameMode();
 UEPROJ_API UClass* Z_Construct_UClass_AUEProjGameMode_NoRegister();
 UPackage* Z_Construct_UPackage__Script_UEProj();
@@ -91,6 +92,20 @@ struct Z_Construct_UClass_AUEProjGameMode_Statics
 		{ "ToolTip", "Game Time" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NormalMaterial_MetaData[] = {
+		{ "Category", "Materials" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe6\x9d\x90\xe8\xb4\xa8\xe8\xb5\x84\xe6\xba\x90\n" },
+#endif
+		{ "ModuleRelativePath", "UEProjGameMode.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x9d\x90\xe8\xb4\xa8\xe8\xb5\x84\xe6\xba\x90" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpecialMaterial_MetaData[] = {
+		{ "Category", "Materials" },
+		{ "ModuleRelativePath", "UEProjGameMode.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SpawnAreaMin;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SpawnAreaMax;
@@ -98,6 +113,8 @@ struct Z_Construct_UClass_AUEProjGameMode_Statics
 	static const UECodeGen_Private::FClassPropertyParams NewProp_CubeClass;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ImportantCubeCount;
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_TimeLimit;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NormalMaterial;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpecialMaterial;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -111,6 +128,8 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AUEProjGameMode_S
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_CubeClass = { "CubeClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, CubeClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CubeClass_MetaData), NewProp_CubeClass_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_ImportantCubeCount = { "ImportantCubeCount", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, ImportantCubeCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ImportantCubeCount_MetaData), NewProp_ImportantCubeCount_MetaData) };
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_TimeLimit = { "TimeLimit", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, TimeLimit), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeLimit_MetaData), NewProp_TimeLimit_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_NormalMaterial = { "NormalMaterial", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, NormalMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NormalMaterial_MetaData), NewProp_NormalMaterial_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpecialMaterial = { "SpecialMaterial", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUEProjGameMode, SpecialMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpecialMaterial_MetaData), NewProp_SpecialMaterial_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUEProjGameMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpawnAreaMin,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpawnAreaMax,
@@ -118,6 +137,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUEProjGa
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_CubeClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_ImportantCubeCount,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_TimeLimit,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_NormalMaterial,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUEProjGameMode_Statics::NewProp_SpecialMaterial,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AUEProjGameMode_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AUEProjGameMode_Statics::DependentSingletons[])() = {
@@ -160,10 +181,10 @@ AUEProjGameMode::~AUEProjGameMode() {}
 struct Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AUEProjGameMode, AUEProjGameMode::StaticClass, TEXT("AUEProjGameMode"), &Z_Registration_Info_UClass_AUEProjGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUEProjGameMode), 3544625625U) },
+		{ Z_Construct_UClass_AUEProjGameMode, AUEProjGameMode::StaticClass, TEXT("AUEProjGameMode"), &Z_Registration_Info_UClass_AUEProjGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUEProjGameMode), 2183798685U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_1145210930(TEXT("/Script/UEProj"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_2945250345(TEXT("/Script/UEProj"),
 	Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GProjs_T_UE_Client_UEProj_Source_UEProj_UEProjGameMode_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

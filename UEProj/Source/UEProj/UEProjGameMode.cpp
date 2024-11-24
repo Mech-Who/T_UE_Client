@@ -15,6 +15,19 @@ AUEProjGameMode::AUEProjGameMode()
 	// set default pawn class to our Blueprinted character
 	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnClassFinder(TEXT("/Game/FirstPerson/Blueprints/BP_FirstPersonCharacter"));
 	DefaultPawnClass = PlayerPawnClassFinder.Class;
+
+	// 加载普通材质
+	static ConstructorHelpers::FObjectFinder<UMaterialInterface> NormalMat(TEXT("/Game/LevelPrototyping/Materials/M_Solid"));
+	if (NormalMat.Succeeded()) {
+		NormalMaterial = NormalMat.Object;
+	}
+
+	// 加载特殊材质
+	static ConstructorHelpers::FObjectFinder<UMaterialInterface> SpecialMat(TEXT("/Game/LevelPrototyping/Materials/MI_Solid_Blue"));
+	if (SpecialMat.Succeeded()) {
+		SpecialMaterial = SpecialMat.Object;
+	}
+	
 	CubeClass = AABP_Cube::StaticClass();
 }
 
@@ -23,17 +36,8 @@ void AUEProjGameMode::BeginPlay() {
 	Super::BeginPlay();
 
 	// 1. 游戏准备
-	// TODO: Spawn解决后再启用
-
-	// 2. 游戏开始
-	// 启动游戏定时器
-	GetWorldTimerManager().SetTimer(GameTimerHandle, this, &AUEProjGameMode::EndGame, TimeLimit, false);
-	GetWorldTimerManager().SetTimer(TickTimerHandle, this, &AUEProjGameMode::ShowTime, 1, true);
-	// 生成方块
-	SpawnCubes();
-	
-	// 3. 游戏结束
-	// TODO
+	this->ResetGame();
+	Utils::display_display(FString(TEXT("===== Game Ready =====")));
 }
 
 // void AUEProjGameMode::AddScore(int Points, APlayerController* Player)
@@ -44,10 +48,11 @@ void AUEProjGameMode::AddScore(int Points)
 	// } else {
 	// 	PlayerScores.Add(Player, Points);
 	// }
-	TotalScore += Points;
-	UE_LOG(LogTemp, Log, TEXT("Current Score: %d"), TotalScore);
-	FString msg = FString::Printf(TEXT("Add Score: %d, Current Score: %d"), Points, TotalScore);
-	Utils::display(msg);
+	if (!this->IsGameOver)
+	{
+		this->TotalScore += Points;
+		Utils::display_display(FString::Printf(TEXT("Current Score: %d"), this->TotalScore));
+	}
 }
 
 // void AUEProjGameMode::RemoveScore(int Points, APlayerController* Player)
@@ -61,10 +66,11 @@ void AUEProjGameMode::RemoveScore(int Points)
 	// 	UE_LOG(LogTemp, Error, TEXT("Error Player, Current Score: %d"), TotalScore);
 	// 	return;
 	// }
-	TotalScore -= Points;
-	UE_LOG(LogTemp, Log, TEXT("Current Score: %d"), TotalScore);
-	FString msg = FString::Printf(TEXT("Current Score: %d"), TotalScore);
-	Utils::display(msg);
+	if (!this->IsGameOver)
+	{
+		this->TotalScore -= Points;
+		Utils::display_display(FString::Printf(TEXT("Current Score: %d"), this->TotalScore));
+	}
 }
 
 int AUEProjGameMode::GetScore() const
@@ -90,6 +96,7 @@ FVector AUEProjGameMode::GetRandomSpawnLocation()
 	return UKismetMathLibrary::RandomPointInBoundingBox((SpawnAreaMin + SpawnAreaMax) / 2, (SpawnAreaMax - SpawnAreaMin) / 2);
 }
 
+// 生成Cubes
 void AUEProjGameMode::SpawnCubes() {
 	// 可视化生成区域
 	DrawDebugBox(GetWorld(), (SpawnAreaMin + SpawnAreaMax) / 2, (SpawnAreaMax - SpawnAreaMin) / 2, FColor::Green, true, 10.0f);
@@ -121,30 +128,73 @@ void AUEProjGameMode::SpawnCubes() {
 		
 		// 设置重要目标
 		if (i < ImportantCubeCount) {
-			Cube->IsImportant = true;  // 标记为重要目标
-			Cube->ScoreValue *= 2;    // 双倍积分
+			if (SpecialMaterial)
+				Cube->BeImportant(Cube->ScoreValue*2, SpecialMaterial);
+			else
+				Cube->BeImportant(Cube->ScoreValue*2);
+		}else
+		{
+			if (NormalMaterial)
+				Cube->SetMaterial(NormalMaterial);
 		}
 	}
 }
 
 // 游戏结束
 void AUEProjGameMode::EndGame() {
-	// 停止游戏逻辑（如停止生成子弹）
+	Utils::display_display(FString(TEXT("===== Game Over =====")));
+	// 修改游戏状态
+	this->IsGameStart = false;
+	this->IsGameOver = true;
+	
+	// 获取所有 ABP_Cube 类型的 Actor
+	TArray<AActor*> FoundCubes;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AABP_Cube::StaticClass(), FoundCubes);
+	// 遍历并销毁每个 Cube
+	for (AActor* Cube : FoundCubes) {
+		if (Cube) {
+			UE_LOG(LogTemp, Log, TEXT("Destroying Cube: %s"), *Cube->GetName());
+			Cube->Destroy();
+		}
+	}
+
+	// 打印得分
 	LogScores();
+
 	// 假设已有定时器句柄 TimerHandle
 	if (GetWorldTimerManager().IsTimerActive(TickTimerHandle)) {
 		GetWorldTimerManager().ClearTimer(TickTimerHandle);
-		UE_LOG(LogTemp, Log, TEXT("Timer has been canceled."));
-		FString msg = FString("Timer has been canceled.");
-		Utils::display(msg);
+		Utils::display_display(FString(TEXT("Time is up!")));
 	}
 }
 
+// 游戏开始
+void AUEProjGameMode::StartGame()
+{
+	this->IsGameStart = true;
+	this->IsGameOver = false;
+	// 启动游戏定时器
+	GetWorldTimerManager().SetTimer(this->GameTimerHandle, this,
+		&AUEProjGameMode::EndGame, this->TimeLimit, false);
+	GetWorldTimerManager().SetTimer(this->TickTimerHandle, this,
+		&AUEProjGameMode::ShowTime, 1, true);
+	// 生成方块
+	SpawnCubes();
+}
+
+// 游戏重置
+void AUEProjGameMode::ResetGame()
+{
+	this->IsGameStart = false;
+	this->IsGameOver = false;
+	this->LeftTime = this->TimeLimit;
+	this->TotalScore = 0;
+}
+
+// 显示剩余时间
 void AUEProjGameMode::ShowTime()
 {
-	UE_LOG(LogTemp, Log, TEXT("Tik tok: %f"), LeftTime);
-	FString msg = FString::Printf(TEXT("Tik tok: %f"), LeftTime);
-	Utils::display(msg);
+	Utils::display_display(FString::Printf(TEXT("Tik tok: %.1f s"), LeftTime));
 	--LeftTime;
 }
 
@@ -154,11 +204,10 @@ void AUEProjGameMode::LogScores() {
 	// 	APlayerController* Player = Pair.Key;
 	// 	int Score = Pair.Value;
 	//
-	// 	UE_LOG(LogTemp, Log, TEXT("Player %s scored: %d"), *Player->GetName(), Score);
+	// 	UE_LOG(LogTemp, Display, TEXT("Player %s scored: %d"), *Player->GetName(), Score);
 	// }
-	UE_LOG(LogTemp, Log, TEXT("Total Score: %d"), TotalScore);
-	FString msg = FString::Printf(TEXT("Total Score: %d"), TotalScore);
-	Utils::display(msg);
+	Utils::display_display(FString::Printf(TEXT("Total Score: %d"), TotalScore));
+	Utils::display_display(FString(TEXT("===== Statistic Over =====")));
 }
 
 
