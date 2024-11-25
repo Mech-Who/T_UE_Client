@@ -22,15 +22,23 @@ public:
 	void RemoveScore(int Points);
 	int GetScore() const;
 
+	UFUNCTION(BlueprintCallable)
 	void EndGame();
+	UFUNCTION(BlueprintCallable)
 	void StartGame();
+	UFUNCTION(BlueprintCallable)
 	void ResetGame();
+	UFUNCTION(BlueprintCallable)
+	void QuitGame();
+	UFUNCTION(BlueprintCallable)
 	void ShowTime();
 
 private:
 	bool IsLocationValid(FVector Location,
 		const TArray<FVector>& ExistingLocations, float MinDistance);
 	void SpawnCubes();
+	void ShowGameStartUI();
+	void ShowGameOverUI();
 	void LogScores();
 
 	// 随机生成位置的函数
@@ -51,6 +59,11 @@ private:
 	int TotalCubes = 20;
 	UPROPERTY(EditAnywhere, Category="Game Rules")
 	TSubclassOf<AActor> CubeClass;
+	// UI 资源
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UUserWidget> GameStartWidgetClass;
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UUserWidget> GameOverWidgetClass;
 	// Valuable Cube
 	UPROPERTY(EditAnywhere, Category = "Game Rules")
 	int ImportantCubeCount = 5;
@@ -64,6 +77,9 @@ private:
 	UMaterialInterface* NormalMaterial = nullptr;
 	UPROPERTY(EditAnywhere, Category = "Materials")
 	UMaterialInterface* SpecialMaterial = nullptr;
+
+	// 当前 UI 实例
+	UUserWidget* CurrentWidget;
 
 	bool IsGameStart = true;
 	bool IsGameOver = false;

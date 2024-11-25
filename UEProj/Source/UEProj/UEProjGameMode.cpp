@@ -7,6 +7,8 @@
 #include "Slate/SGameLayerManager.h"
 #include "UObject/ConstructorHelpers.h"
 #include "utils.h"
+#include "Blueprint/UserWidget.h"
+#include "Blueprint/WidgetBlueprintLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 
 AUEProjGameMode::AUEProjGameMode()
@@ -27,6 +29,22 @@ AUEProjGameMode::AUEProjGameMode()
 	if (SpecialMat.Succeeded()) {
 		SpecialMaterial = SpecialMat.Object;
 	}
+
+	// 加载 UI_GameStart
+	static ConstructorHelpers::FClassFinder<UUserWidget> GameStartWidgetFinder(TEXT("/Game/UserInterface/UI_StartMenu"));
+	if (GameStartWidgetFinder.Succeeded()) {
+		GameStartWidgetClass = GameStartWidgetFinder.Class;
+	} else {
+		UE_LOG(LogTemp, Error, TEXT("Failed to load GameStartWidgetClass!"));
+	}
+	
+	// 加载 UI_GameOver
+	static ConstructorHelpers::FClassFinder<UUserWidget> GameOverWidgetFinder(TEXT("/Game/UserInterface/UI_GameOver"));
+	if (GameOverWidgetFinder.Succeeded()) {
+		GameOverWidgetClass = GameOverWidgetFinder.Class;
+	} else {
+		UE_LOG(LogTemp, Error, TEXT("Failed to load GameOverWidgetClass!"));
+	}
 	
 	CubeClass = AABP_Cube::StaticClass();
 }
@@ -34,10 +52,59 @@ AUEProjGameMode::AUEProjGameMode()
 // 初始化
 void AUEProjGameMode::BeginPlay() {
 	Super::BeginPlay();
-
+	
+	this->ShowGameStartUI();
+	
 	// 1. 游戏准备
 	this->ResetGame();
 	Utils::display_display(FString(TEXT("===== Game Ready =====")));
+}
+
+void AUEProjGameMode::ShowGameStartUI() {
+	Utils::display_display(FString(TEXT("===== Show Game Start UI1 =====")));
+	if (GameStartWidgetClass) {
+		// 禁用玩家输入
+		APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0);
+		if (PlayerController) {
+			PlayerController->SetShowMouseCursor(true);
+			PlayerController->SetInputMode(FInputModeUIOnly());
+		}
+		// 创建UI组件
+		CurrentWidget = UWidgetBlueprintLibrary::Create(GetWorld(), GameStartWidgetClass,nullptr);
+		if (CurrentWidget) {
+			CurrentWidget->AddToViewport();
+		}
+		Utils::display_display(FString(TEXT("===== Show Game Start UI =====")));
+	} else {
+		UE_LOG(LogTemp, Error, TEXT("GameStartWidgetClass is not set!"));
+	}
+}
+
+void AUEProjGameMode::ShowGameOverUI() {
+	if (GameOverWidgetClass) {
+		// 禁用玩家输入
+		APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0);
+		if (PlayerController) {
+			PlayerController->SetShowMouseCursor(true);
+			PlayerController->SetInputMode(FInputModeUIOnly());
+		}
+		// 创建UI组件
+		CurrentWidget = UWidgetBlueprintLibrary::Create(GetWorld(), GameOverWidgetClass, nullptr);
+		if (CurrentWidget) {
+			CurrentWidget->AddToViewport();
+			
+			// 在这里可以通过接口或绑定更新分数显示
+			// 例如：假设 UI_GameOver Blueprint 里有一个 SetScore 函数
+			UFunction* SetScoreFunction = CurrentWidget->FindFunction(FName("SetTotalScore"));
+			if (SetScoreFunction) {
+				FFrame::KismetExecutionMessage(TEXT("Updating Score on UI"), ELogVerbosity::Log);
+				CurrentWidget->ProcessEvent(SetScoreFunction, &this->TotalScore);
+			}
+		}
+		Utils::display_display(FString(TEXT("===== Show Game Over UI =====")));
+	} else {
+		UE_LOG(LogTemp, Error, TEXT("GameOverWidgetClass is not set!"));
+	}
 }
 
 // void AUEProjGameMode::AddScore(int Points, APlayerController* Player)
@@ -140,6 +207,13 @@ void AUEProjGameMode::SpawnCubes() {
 	}
 }
 
+void AUEProjGameMode::QuitGame()
+{
+	// 退出游戏
+	UKismetSystemLibrary::QuitGame(this, nullptr, EQuitPreference::Quit, true);
+}
+
+
 // 游戏结束
 void AUEProjGameMode::EndGame() {
 	Utils::display_display(FString(TEXT("===== Game Over =====")));
@@ -158,6 +232,8 @@ void AUEProjGameMode::EndGame() {
 		}
 	}
 
+	this->ShowGameOverUI();
+	
 	// 打印得分
 	LogScores();
 
