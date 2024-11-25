@@ -32,6 +32,8 @@ public:
 	void QuitGame();
 	UFUNCTION(BlueprintCallable)
 	void ShowTime();
+	UFUNCTION(BlueprintCallable)
+	void SetScoreWidget(UUserWidget *widget);
 
 private:
 	bool IsLocationValid(FVector Location,
@@ -71,6 +73,7 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Game Rules")
 	double TimeLimit = 15.0f;
 	double LeftTime = TimeLimit;
+	UPROPERTY(EditAnywhere, Category = "Game Rules")
 	int TotalScore = 0;
 	// 材质资源
 	UPROPERTY(EditAnywhere, Category = "Materials")
@@ -80,6 +83,7 @@ private:
 
 	// 当前 UI 实例
 	UUserWidget* CurrentWidget;
+	UUserWidget* ScoreWidget;
 
 	bool IsGameStart = true;
 	bool IsGameOver = false;

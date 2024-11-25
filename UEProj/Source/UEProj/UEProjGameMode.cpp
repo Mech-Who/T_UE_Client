@@ -57,11 +57,10 @@ void AUEProjGameMode::BeginPlay() {
 	
 	// 1. 游戏准备
 	this->ResetGame();
-	Utils::display_display(FString(TEXT("===== Game Ready =====")));
+	// Utils::display_display(FString(TEXT("===== Game Ready =====")));
 }
 
 void AUEProjGameMode::ShowGameStartUI() {
-	Utils::display_display(FString(TEXT("===== Show Game Start UI1 =====")));
 	if (GameStartWidgetClass) {
 		// 禁用玩家输入
 		APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0);
@@ -74,7 +73,7 @@ void AUEProjGameMode::ShowGameStartUI() {
 		if (CurrentWidget) {
 			CurrentWidget->AddToViewport();
 		}
-		Utils::display_display(FString(TEXT("===== Show Game Start UI =====")));
+		// Utils::display_display(FString(TEXT("===== Show Game Start UI =====")));
 	} else {
 		UE_LOG(LogTemp, Error, TEXT("GameStartWidgetClass is not set!"));
 	}
@@ -85,6 +84,7 @@ void AUEProjGameMode::ShowGameOverUI() {
 		// 禁用玩家输入
 		APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0);
 		if (PlayerController) {
+			PlayerController->DisableInput(PlayerController);
 			PlayerController->SetShowMouseCursor(true);
 			PlayerController->SetInputMode(FInputModeUIOnly());
 		}
@@ -94,14 +94,13 @@ void AUEProjGameMode::ShowGameOverUI() {
 			CurrentWidget->AddToViewport();
 			
 			// 在这里可以通过接口或绑定更新分数显示
-			// 例如：假设 UI_GameOver Blueprint 里有一个 SetScore 函数
 			UFunction* SetScoreFunction = CurrentWidget->FindFunction(FName("SetTotalScore"));
 			if (SetScoreFunction) {
 				FFrame::KismetExecutionMessage(TEXT("Updating Score on UI"), ELogVerbosity::Log);
 				CurrentWidget->ProcessEvent(SetScoreFunction, &this->TotalScore);
 			}
 		}
-		Utils::display_display(FString(TEXT("===== Show Game Over UI =====")));
+		// Utils::display_display(FString(TEXT("===== Show Game Over UI =====")));
 	} else {
 		UE_LOG(LogTemp, Error, TEXT("GameOverWidgetClass is not set!"));
 	}
@@ -118,7 +117,19 @@ void AUEProjGameMode::AddScore(int Points)
 	if (!this->IsGameOver)
 	{
 		this->TotalScore += Points;
-		Utils::display_display(FString::Printf(TEXT("Current Score: %d"), this->TotalScore));
+		// Utils::display_display(FString::Printf(TEXT("Current Score: %d"), this->TotalScore));
+		// 在这里可以通过接口或绑定更新分数显示
+		if (this->ScoreWidget)
+		{
+			UFunction* SetScoreFunction = this->ScoreWidget->FindFunction(FName("SetScore"));
+			if (SetScoreFunction) {
+				FFrame::KismetExecutionMessage(TEXT("Updating Score on UI"), ELogVerbosity::Log);
+				this->ScoreWidget->ProcessEvent(SetScoreFunction, &this->TotalScore);
+			}
+		}else
+		{
+			UE_LOG(LogTemp, Error, TEXT("ScoreWidget is not set!"));
+		}
 	}
 }
 
@@ -136,7 +147,19 @@ void AUEProjGameMode::RemoveScore(int Points)
 	if (!this->IsGameOver)
 	{
 		this->TotalScore -= Points;
-		Utils::display_display(FString::Printf(TEXT("Current Score: %d"), this->TotalScore));
+		// Utils::display_display(FString::Printf(TEXT("Current Score: %d"), this->TotalScore));
+		// 在这里可以通过接口或绑定更新分数显示
+		if (this->ScoreWidget)
+		{
+			UFunction* SetScoreFunction = this->ScoreWidget->FindFunction(FName("SetScore"));
+			if (SetScoreFunction) {
+				FFrame::KismetExecutionMessage(TEXT("Updating Score on UI"), ELogVerbosity::Log);
+				this->ScoreWidget->ProcessEvent(SetScoreFunction, &this->TotalScore);
+			}
+		}else
+		{
+			UE_LOG(LogTemp, Error, TEXT("ScoreWidget is not set!"));
+		}
 	}
 }
 
@@ -165,8 +188,8 @@ FVector AUEProjGameMode::GetRandomSpawnLocation()
 
 // 生成Cubes
 void AUEProjGameMode::SpawnCubes() {
-	// 可视化生成区域
-	DrawDebugBox(GetWorld(), (SpawnAreaMin + SpawnAreaMax) / 2, (SpawnAreaMax - SpawnAreaMin) / 2, FColor::Green, true, 10.0f);
+	// DEBUG: 可视化生成区域
+	// DrawDebugBox(GetWorld(), (SpawnAreaMin + SpawnAreaMax) / 2, (SpawnAreaMax - SpawnAreaMin) / 2, FColor::Green, true, 10.0f);
 	// TODO: 设置AActor作为生成点坐标，但是AActor如何设置！
 	if (!CubeClass) {
 		UE_LOG(LogTemp, Warning, TEXT("CubeClass is not set!"));
@@ -216,7 +239,7 @@ void AUEProjGameMode::QuitGame()
 
 // 游戏结束
 void AUEProjGameMode::EndGame() {
-	Utils::display_display(FString(TEXT("===== Game Over =====")));
+	// Utils::display_display(FString(TEXT("===== Game Over =====")));
 	// 修改游戏状态
 	this->IsGameStart = false;
 	this->IsGameOver = true;
@@ -240,7 +263,7 @@ void AUEProjGameMode::EndGame() {
 	// 假设已有定时器句柄 TimerHandle
 	if (GetWorldTimerManager().IsTimerActive(TickTimerHandle)) {
 		GetWorldTimerManager().ClearTimer(TickTimerHandle);
-		Utils::display_display(FString(TEXT("Time is up!")));
+		// Utils::display_display(FString(TEXT("Time is up!")));
 	}
 }
 
@@ -270,8 +293,25 @@ void AUEProjGameMode::ResetGame()
 // 显示剩余时间
 void AUEProjGameMode::ShowTime()
 {
-	Utils::display_display(FString::Printf(TEXT("Tik tok: %.1f s"), LeftTime));
+	// Utils::display_display(FString::Printf(TEXT("Tik tok: %.1f s"), this->LeftTime));
+	if (this->ScoreWidget)
+	{
+		UFunction* SetScoreFunction = this->ScoreWidget->FindFunction(FName("SetTime"));
+		if (SetScoreFunction) {
+			FFrame::KismetExecutionMessage(TEXT("Updating Score on UI"), ELogVerbosity::Log);
+			this->ScoreWidget->ProcessEvent(SetScoreFunction, &this->LeftTime);
+		}
+	}else
+	{
+		UE_LOG(LogTemp, Error, TEXT("ScoreWidget is not set!"));
+	}
 	--LeftTime;
+}
+
+// 设置得分组件
+void AUEProjGameMode::SetScoreWidget(UUserWidget *widget)
+{
+	this->ScoreWidget = widget;
 }
 
 // 打印积分日志
@@ -282,8 +322,8 @@ void AUEProjGameMode::LogScores() {
 	//
 	// 	UE_LOG(LogTemp, Display, TEXT("Player %s scored: %d"), *Player->GetName(), Score);
 	// }
-	Utils::display_display(FString::Printf(TEXT("Total Score: %d"), TotalScore));
-	Utils::display_display(FString(TEXT("===== Statistic Over =====")));
+	// Utils::display_display(FString::Printf(TEXT("Total Score: %d"), TotalScore));
+	// Utils::display_display(FString(TEXT("===== Statistic Over =====")));
 }
 
 
