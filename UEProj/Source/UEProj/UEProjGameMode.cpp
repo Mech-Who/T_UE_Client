@@ -263,7 +263,6 @@ void AUEProjGameMode::EndGame() {
 	// 假设已有定时器句柄 TimerHandle
 	if (GetWorldTimerManager().IsTimerActive(TickTimerHandle)) {
 		GetWorldTimerManager().ClearTimer(TickTimerHandle);
-		// Utils::display_display(FString(TEXT("Time is up!")));
 	}
 }
 
@@ -273,8 +272,6 @@ void AUEProjGameMode::StartGame()
 	this->IsGameStart = true;
 	this->IsGameOver = false;
 	// 启动游戏定时器
-	GetWorldTimerManager().SetTimer(this->GameTimerHandle, this,
-		&AUEProjGameMode::EndGame, this->TimeLimit, false);
 	GetWorldTimerManager().SetTimer(this->TickTimerHandle, this,
 		&AUEProjGameMode::ShowTime, 1, true);
 	// 生成方块
@@ -304,6 +301,10 @@ void AUEProjGameMode::ShowTime()
 	}else
 	{
 		UE_LOG(LogTemp, Error, TEXT("ScoreWidget is not set!"));
+	}
+	if (this->LeftTime <= 0)
+	{
+		EndGame();
 	}
 	--LeftTime;
 }

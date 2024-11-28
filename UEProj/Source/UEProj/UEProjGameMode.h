@@ -53,7 +53,6 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Game Rules")
 	FVector SpawnAreaMax = FVector(2850.0f, 3350.0f, 500.0f);    // 区域最大值
 	
-	FTimerHandle GameTimerHandle;
 	FTimerHandle TickTimerHandle;
 	TMap<APlayerController*, int> PlayerScores;
 	// Total Cubes
