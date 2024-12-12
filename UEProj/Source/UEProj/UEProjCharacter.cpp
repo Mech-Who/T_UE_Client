@@ -11,6 +11,8 @@
 
 #include "UEProjCharacter.h"
 #include "UEProjProjectile.h"
+#include "GameSetting/UEProjGameMode.h"
+#include "UserInterface/UI_HUDBase.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -36,6 +38,7 @@ AUEProjCharacter::AUEProjCharacter()
 	Mesh1P->CastShadow = false;
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
+	
 
 }
 
@@ -93,4 +96,14 @@ void AUEProjCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+float AUEProjCharacter::TakeDamage(float DamageAmount,
+		struct FDamageEvent const& DamageEvent,
+		class AController* EventInstigator,
+		AActor* DamageCauser)
+{
+	auto GameMode = Cast<AUEProjGameMode>(GetWorld()->GetAuthGameMode());
+	GameMode->UpdateHealth(DamageAmount);
+	return DamageAmount; // 返回值是什么
 }

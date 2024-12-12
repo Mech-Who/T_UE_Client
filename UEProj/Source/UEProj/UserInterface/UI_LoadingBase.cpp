@@ -25,17 +25,12 @@ void UUI_LoadingBase::UpdateProgress(int Percent)
 		UE_LOG(LogTemp, Error, TEXT("Loading progress update error"));
 		return;
 	}
-	LoadingProgress->SetPercent(Percent / 100.0f);
+	LoadingProgress->SetPercent(Percent / FullLoading);
 	LoadingProgressText->SetText(FText::FromString(FString::Printf(TEXT("%d%%"), Percent)));
 	UE_LOG(LogTemp, Display, TEXT("Loading progress update to '%d' success"), Percent);
 	if (Percent >= 100)
 	{
-		ProgressFinished();
+		StopAnimation(LoadingZoomInAndOut);
 	}
-}
-
-void UUI_LoadingBase::ProgressFinished()
-{
-	StopAnimation(LoadingZoomInAndOut);
 }
 

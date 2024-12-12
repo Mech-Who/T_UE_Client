@@ -1,8 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "UEProjProjectile.h"
+
+#include "UEProjCharacter.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 AUEProjProjectile::AUEProjProjectile() 
 {
@@ -33,11 +36,18 @@ AUEProjProjectile::AUEProjProjectile()
 
 void AUEProjProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	UE_LOG(LogTemp, Display, TEXT("Projectile Hit: OtherActor(%p), OtherComponent(%p)"), OtherActor, OtherComp);
+	if (auto Character = Cast<AUEProjCharacter>(OtherActor))
+	{
+		UGameplayStatics::ApplyDamage(Character, 5, nullptr,
+			this, UDamageType::StaticClass());
+	}
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
+		
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
-
 		Destroy();
 	}
+	// Destroy();
 }

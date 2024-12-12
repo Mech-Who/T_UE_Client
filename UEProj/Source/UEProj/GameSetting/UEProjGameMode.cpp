@@ -293,10 +293,12 @@ void AUEProjGameMode::StartGame()
 // 游戏重置
 void AUEProjGameMode::ResetGame()
 {
-	this->IsGameStart = false;
-	this->IsGameOver = false;
-	this->LeftTime = this->TimeLimit;
-	this->TotalScore = 0;
+	IsGameStart = false;
+	IsGameOver = false;
+	LeftHealth = FullHealth;
+	LeftAmmo = FullAmmo;
+	LeftTime = TimeLimit;
+	TotalScore = 0;
 	UE_LOG(LogTemp, Display,
 		TEXT("Game Reset: LeftTime: %f s, TotalScore: %d"),
 		LeftTime, TotalScore);
@@ -320,6 +322,38 @@ void AUEProjGameMode::UpdateTime()
 	}
 }
 
+void AUEProjGameMode::UpdateAmmo()
+{
+	// UE_LOG(LogTemp, Display, TEXT("Fire!"));
+	if (LeftAmmo <= 0)
+	{
+		UE_LOG(LogTemp, Display, TEXT("You have no more Ammo!"));
+		return;
+	}
+	--LeftAmmo;
+	if (CurrentWidget)
+	{
+		auto HUDWidget = Cast<UUI_HUDBase>(CurrentWidget);
+		HUDWidget->UpdateAmmo(LeftAmmo);
+	}
+}
+
+void AUEProjGameMode::UpdateHealth(float Damage)
+{
+	UE_LOG(LogTemp, Display, TEXT("Update Health!"));
+	LeftHealth -= Damage;
+	if (CurrentWidget)
+	{
+		auto HUDWidget = Cast<UUI_HUDBase>(CurrentWidget);
+		HUDWidget->UpdateHealth(LeftHealth);
+	}
+	if (LeftHealth <= 0)
+	{
+		EndGame();
+	}
+}
+
+
 // 打印积分日志
 void AUEProjGameMode::LogScores() {
 	// for (auto& Pair : PlayerScores) {
@@ -340,6 +374,9 @@ void AUEProjGameMode::LoadingFinished()
 		auto PlayerController = CurrentWidget->GetOwningPlayer();
 		EnablePlayer(PlayerController);
 		SetCurrentWidget(GameHUDWidgetClass, PlayerController);
+		auto HUD = Cast<UUI_HUDBase>(CurrentWidget);
+		HUD->SetFullHealth(FullHealth);
+		HUD->SetFullAmmo(FullAmmo);
 		UE_LOG(LogTemp, Display, TEXT("Loading finished"));
 	}
 
@@ -352,6 +389,11 @@ void AUEProjGameMode::SetCurrentWidget(TSubclassOf<UUserWidget> NewWidget, APlay
 	{
 		CurrentWidget->AddToViewport();
 	}
+}
+
+UUserWidget* AUEProjGameMode::GetCurrentWidget()
+{
+	return CurrentWidget;
 }
 
 void AUEProjGameMode::EnablePlayer(APlayerController* PlayerController)
@@ -373,4 +415,3 @@ void AUEProjGameMode::DisablePlayer(APlayerController* PlayerController)
 		PlayerController->SetInputMode(FInputModeUIOnly());
 	}
 }
-

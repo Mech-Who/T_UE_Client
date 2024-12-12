@@ -18,19 +18,19 @@ class UEPROJ_API UUI_LoginBase : public UUserWidget
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UTextBlock* ErrorHintText;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UTextBlock* UsernameText;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UTextBlock* PasswordText;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UEditableText* UsernameEditText;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UEditableText* PasswordEditText;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UButton* ConfirmButton;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UButton* CancelButton;
 
 	virtual void NativeOnInitialized() override;

@@ -38,8 +38,18 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void UpdateTime();
 	UFUNCTION(BlueprintCallable)
+	void UpdateAmmo();
+	UFUNCTION(BlueprintCallable)
+	void UpdateHealth(float Damage);
+	UFUNCTION(BlueprintCallable)
 	void SetCurrentWidget(TSubclassOf<UUserWidget> NewWidget, APlayerController* PlayerController=nullptr);
-
+	UFUNCTION(BlueprintCallable)
+	UUserWidget* GetCurrentWidget();
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE float GetLeftAmmo() { return LeftAmmo; }
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE float GetLeftHealth() { return LeftHealth; }
+	
 	// 地图生成范围
 	UPROPERTY(EditAnywhere, Category = "Game Rules|Spawn")
 	FVector SpawnAreaMin = FVector(50.0f, 50.0f, 50.0f);  // 区域最小值
@@ -63,12 +73,17 @@ public:
 	TSubclassOf<UUserWidget> GameHUDWidgetClass;
 	UPROPERTY(EditAnywhere, Category = "Game Rules|UI")
 	TSubclassOf<UUserWidget> GameLoginWidgetClass;
-	// Game Time
-	UPROPERTY(EditAnywhere, Category = "Game Rules|Time")
-	double TimeLimit = 15.0f;
-	double LeftTime = TimeLimit;
+	// 游戏时间
+	UPROPERTY(EditAnywhere, Category = "Game Rules")
+	float TimeLimit = 15.0f;
+	// 游戏弹药
+	UPROPERTY(EditAnywhere, Category = "Game Rules")
+	int FullAmmo = 40;
+	// 玩家血量
+	UPROPERTY(EditAnywhere, Category = "Game Rules")
+	float FullHealth = 100.0f;
 	// 游戏得分
-	UPROPERTY(EditAnywhere, Category = "Game Rules|Score")
+	UPROPERTY(EditAnywhere, Category = "Game Rules")
 	int TotalScore = 0;
 	// 材质资源
 	UPROPERTY(EditAnywhere, Category = "Game Rules|Cubes|Material")
@@ -92,6 +107,9 @@ protected:
 	bool IsGameOver = false;
 
 	int LoadingPercent = 0;
+	float LeftTime = TimeLimit;
+	int LeftAmmo = FullAmmo;
+	int LeftHealth = FullHealth;
 };
 
 

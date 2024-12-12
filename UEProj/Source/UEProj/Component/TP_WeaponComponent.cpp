@@ -12,6 +12,9 @@
 #include "TP_WeaponComponent.h"
 #include "UEProj/UEProjCharacter.h"
 #include "UEProj/UEProjProjectile.h"
+#include "UEProj/GameSetting/UEProjGameMode.h"
+#include "UEProj/UserInterface/UI_CrossHairBase.h"
+#include "UEProj/UserInterface/UI_HUDBase.h"
 
 // Sets default values for this component's properties
 UTP_WeaponComponent::UTP_WeaponComponent()
@@ -27,7 +30,12 @@ void UTP_WeaponComponent::Fire()
 	{
 		return;
 	}
-
+	auto GameMode = Cast<AUEProjGameMode>(GetWorld()->GetAuthGameMode());
+	if (GameMode->GetLeftAmmo() <= 0)
+	{
+		return;
+	}
+	
 	// Try and fire a projectile
 	if (ProjectileClass != nullptr)
 	{
@@ -44,7 +52,13 @@ void UTP_WeaponComponent::Fire()
 			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 	
 			// Spawn the projectile at the muzzle
-			World->SpawnActor<AUEProjProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+			auto projectile = World->SpawnActor<AUEProjProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+			projectile->SetOwner(Character);
+
+			// Ammo扣除
+			GameMode->UpdateAmmo();
+			UUI_HUDBase* hud = Cast<UUI_HUDBase>(GameMode->GetCurrentWidget());
+			hud->GetCrossHair()->OnFire();
 		}
 	}
 	

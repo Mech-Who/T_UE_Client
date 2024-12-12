@@ -22,18 +22,21 @@ public:
 
 	virtual void NativeOnInitialized() override;
 	
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UTextBlock* LoadingText;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UTextBlock* LoadingProgressText;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	UProgressBar* LoadingProgress;
-	UPROPERTY(BlueprintReadOnly, Transient, meta=(BindWidgetAnim, Category="UI_Elements"))
+	UPROPERTY(BlueprintReadOnly, Transient, meta=(BindWidgetAnim))
 	UWidgetAnimation* LoadingZoomInAndOut;
 
 	UFUNCTION(BlueprintCallable)
 	void UpdateProgress(int Percent);
-	
+	UFUNCTION(BlueprintCallable)
+	float GetFullLoading(){ return FullLoading;}
+	UFUNCTION(BlueprintCallable)
+	void SetFullLoading(float Value) { FullLoading = Value;}
 protected:
-	void ProgressFinished();
+	float FullLoading = 100.0f;
 };
